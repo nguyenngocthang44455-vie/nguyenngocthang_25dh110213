@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký sinh viên</title>
+
+    <style>
+        form {
+            width: 600px;
+        }
+
+        fieldset {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>NHẬP THÔNG TIN SINH VIÊN</h1>
+
+    <form action="https://www.google.com"
+          method="post"
+          enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>THÔNG TIN SINH VIÊN</legend>
+
+            <p>
+                <label for="hoten">HỌ VÀ TÊN:</label>
+                <input type="text" id="hoten" name="hoten" required>
+            </p>
+
+            <p>
+                <label for="mssv">MÃ SỐ SINH VIÊN:</label>
+                <input type="text"
+                       id="mssv"
+                       name="mssv"
+                       pattern="[0-9]{2}[a-z]{2}[0-9]{6}"
+                       title="Nhập đúng định dạng, ví dụ: 17dh110123"
+                       required>
+            </p>
+
+            <p>
+                <label for="ngaysinh">NGÀY SINH:</label>
+                <input type="date" id="ngaysinh" name="ngaysinh" required>
+            </p>
+
+            <p>
+                CHUYÊN NGÀNH:
+
+                <input type="radio" id="cnpm" name="chuyennganh" value="CNPM" required>
+                <label for="cnpm">CNPM</label>
+
+                <input type="radio" id="httt" name="chuyennganh" value="HTTT">
+                <label for="httt">HTTT</label>
+
+                <input type="radio" id="anm" name="chuyennganh" value="AN NINH MẠNG">
+                <label for="anm">AN NINH MẠNG</label>
+            </p>
+
+            <p>
+                SỞ THÍCH:<br>
+
+                <input type="checkbox" id="laptrinh" name="sothich" value="Viết chương trình">
+                <label for="laptrinh">VIẾT CHƯƠNG TRÌNH</label><br>
+
+                <input type="checkbox" id="csdl" name="sothich" value="Phân tích CSDL">
+                <label for="csdl">PHÂN TÍCH CSDL</label><br>
+
+                <input type="checkbox" id="mang" name="sothich" value="Xây dựng sơ đồ mạng">
+                <label for="mang">XÂY DỰNG SƠ ĐỒ MẠNG</label>
+            </p>
+
+            <p>
+                <label for="mau">MÀU SẮC YÊU THÍCH:</label>
+                <input type="color" id="mau" name="mau" value="#000000">
+            </p>
+
+            <p>
+                <label for="hinhanh">HÌNH ĐẠI DIỆN:</label>
+                <input type="file"
+                       id="hinhanh"
+                       name="hinhanh"
+                       accept=".jpg,.jpeg,.png"
+                       required>
+            </p>
+
+            <p>
+                <label for="tendn">TÊN ĐĂNG NHẬP WEB TRƯỜNG:</label>
+                <input type="text" id="tendn" name="tendn" required>
+            </p>
+
+            <p>
+                <label for="matkhau">MẬT KHẨU ĐĂNG NHẬP WEB TRƯỜNG:</label>
+                <input type="password"
+                       id="matkhau"
+                       name="matkhau"
+                       minlength="6"
+                       required>
+            </p>
+
+            <p>
+                <label for="nhaplai">NHẬP LẠI MẬT KHẨU:</label>
+                <input type="password"
+                       id="nhaplai"
+                       name="nhaplai"
+                       minlength="6"
+                       required>
+            </p>
+
+            <p>
+                <input type="submit" value="Gửi dữ liệu về máy chủ">
+                <input type="reset" value="Nhập lại">
+            </p>
+        </fieldset>
+    </form>
+
+    <p><a href="home.html">Quay về trang chủ</a></p>
+
+</body>
+</html>
